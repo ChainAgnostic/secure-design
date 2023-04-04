@@ -1,5 +1,8 @@
 # Secure Design WG - Community Call #2
 
+[![hackmd-github-sync-badge](https://hackmd.io/_FozN2RTT56IjTIhch_V9A/badge)](https://hackmd.io/_FozN2RTT56IjTIhch_V9A)
+
+
 April 4, 8am PST • [Register](https://lu.ma/iolqdlow)
 
 ## Preamble:
