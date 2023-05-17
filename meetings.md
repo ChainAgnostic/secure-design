@@ -1,11 +1,81 @@
-# Secure Design WG - Community Call #2
+# Secure Design - Community Call
+[Community Calendar](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
-[![hackmd-github-sync-badge](https://hackmd.io/_FozN2RTT56IjTIhch_V9A/badge)](https://hackmd.io/_FozN2RTT56IjTIhch_V9A)
+## #3 May 16, 8am PST - [RSVP](https://lu.ma/b2faxjtg)
 
+### In attendance:
 
-April 4, 8am PST • [Register](https://lu.ma/iolqdlow)
+- Ryan Betts, Fission ([@depatchedmode](https://twitter.com/depatchedmode) everywhere)
+- Agost Biro, SealVault
+- Antonela, MetaMask
+- Juan Caballero, CASA
+- Salief Lewis, Public Assembly
+- Sam Gbafa, Spruce
+- Charles Cunningham, Spruce
+- Johnny Howle
 
-## Preamble:
+### Agenda & Notes:
+
+- **Announcements:**
+    - Bluesky account: [securedesign.bsky.social](https://staging.bsky.app/profile/securedesign.bsky.social) ? (should I get us @chainagnostic.org ??? haven't done it yet but i think it's just a signature in a /.wellknown/ or a TXT rec or something)
+- **Discussion:**
+    - Quick intro to ReCap (Spruce)
+        - [grab link to Sam's presentation](https://docs.google.com/presentation/d/16eLv4z52zMyKVhDl8VAJJjegs8G6rdV_eo90EQRJHNY/edit) 
+            - need permissions tho, maybe save as PDF and host somewhere public?
+        - extension to SIWE that aims to give users the authority to grant permissions to an app
+        - focus is on helping people *understand* what they are saying yes to - informed consent
+        - The ReCap payload is a barebones standard that a more optimal UX / grammar could be built atop of
+        - Concern: Reads a bit like a ToS right now. Could something like a Metamask ReCap Snap make this more legible? Possibly there could be registry of ReCap namespaces that help to organize this?
+        - Salief: does this differ from Stella and Fire wrt interpreting transactions? 
+        - Sam: ReCap is mostly about informed consent and communication of the authorization
+        - Antonela/Johnny: how does it relate to [Delegatable](https://delegatable.org/docs/feature)?
+        - Sam: ReCap is off-chain vs delegatable which is solely on-chain. ReCap is DID focused. 
+        - Sam: looking at session keys and AA: how can you delegate a spend limit to a session key? ReCap could offer help here.
+        - Antonela: how do you handle expiry / revocation / management session-keys multi-chain?
+        - Sam: delegate to browser key / session key and then that could be short lived or expire with the session. If you want something longer lived, management of that key is an open question.
+        - Juan: look at chain proofs https://github.com/ChainAgnostic/CAIPs/pull/218/files
+        - Antonela: you are providing a way to delegate trust, but there's no way to expose that to users at the moment
+        - Sam: revocation may be out of scope of the ReCap spec itself. in the kepler implementation we do it one way. in Ceramic or Fission there might be a more appropriate way. ReCap is about making the granting verifiable and legible.
+        - Ryan: two problems
+            - where is my history
+            - how do I let the world know I've changed my consent
+        - Antonela: this is already a problem with messages in general. We cannot show all that history. With Delegatable specifically how to you propogate the revocation at one branch in the tree of delegations, for example.
+        - Ryan: what about making permissions piecemeal and progressive? and where does that data live?
+        - Antonela: contextual permissions
+        - Johnny: do you see atomizing being a path? or do you redefine the whole basket of permissions?
+        - Sam: We want to focus on helping developers manage this and right now going the basket route.
+        - Johnny: does granting permissions have to happen in the wallet dialogue? Or can it work with session keys?
+        - Charles: In web apps we've been trying to minimize trips to metamask. We generate a session key in the browser to do all the things you need with various services. Tradeoff between UX and how you manage session keys. If you want contextual permissions you can create a session key that recieves all the permissions and then delegate from that security scope. You would have to trust the "UI" that contains the session key. 
+        - Antonela: some permissions that are unrevocable in Metamask. For example, connection to the browser only revokes the permission to ask again. Exposing the capability in an explicit way in the request.
+    - Agost: understanding permissions
+        - optimizing vs satisficing
+        - thinking about this problem feels very in scope: to enable optimization
+        - we have to eliminate permissions pop ups as much as possible
+        - when we have to present a permissions request, how do we present it in a way that the user will actually read through
+        - Antonela: 
+            - > J. Tan, K. Nguyen, M. Theodorides, H. Negron-Arroyo, C. Thompson, S. Egelman, and D. Wagner. The Effect of Developer-Specified Explanations for Permission Re- quests on Smartphone User Behavior. In Proceedings of the SIGCHI Conference on Human Factors in Com- puting Systems, 2014. 3
+            - >P. Wijesekera, A. Baokar, A. Hosseini, S. Egelman, D. Wagner, and K. Beznosov. Android Permissions Remystified: A Field Study on Contextual Integrity. In Proc. of USENIX Security, 2015. 3, 4
+        - Johnny: rather than telling somebody you're going to disclose address / b-day, you tell the user whether this is increasing or decreasing privacy. how do you show people that this disclosure is deleterious to your privacy / secureness? Gamify it w/ points. We could propose this as a prototype.
+        - Charles: Selective disclosure is kind of like data golf
+        - Antonela: We are redesigning our allowances screen to discourage unlimited allowances. That friciton works really well. People have been more conscientious about whether to delegate this permission? Number of transaction rejections went way up. Good: less funds exposed. Bad: app communication may be failing more.
+        - Juan: I also think there's a metaphorical weight to the yes/no modal-- it's a "take it or leave it". I have always been partial to popups that give at least a crumb of agency, e.g., "would you like to switch your trust level from 'low' to 'medium'? you can always change it later under settings > permissions "
+    - Quick summary of permissions problems
+        - Signature approval? (Agost?)
+        - AA Permissions? (Antonela?)
+        - Decentralized Revocation (Ryan)
+- **Projects**: What can Secure Design do to move things forward this month?
+
+### Upcoming Events: 
+  - Secure Design @ [DWeb Camp - June 21-25](https://dwebcamp.org/)
+  - [Wallet Uncon](https://github.com/WalletUnCon) - TBD
+  - any volunteers?
+
+### Actions Items:
+- Continue discussions about Authorization / Permissions on Github. Let's select some flows to prototype — bluesky (aka no constraints... not the social messaging app) — and see what can be accomplished with today's capabilities.
+
+## #2 April 4, 8am PST - [RSVP](https://lu.ma/iolqdlow)
+
+### Preamble:
 
 Our second ever Secure / Design Working Group community call!
 
@@ -20,7 +90,7 @@ More background on us can be found here:
 + [Twitter/@SecureDesignWG](https://twitter.com/securedesignwg)
 + [Secure Design: A draft of 7 principles](https://depatchedmode.mirror.xyz/4t_7BUzz5q3XlPtH7EgtGL61nh9U8plsfH23i7x5_lU)
 
-## In attendance:
+### In attendance:
 
 + Ryan Betts (aka [depatchedmode](https://twitter.com/depatchedmode)), Head of Design @ [Fission](fission.codes), [Causal Islands](causalislands.com) & [Webnative](webnative.dev)
    + **I'm here because**: I want to ensure the products and systems I help to design leave folks feeling secure in every sense of the word. And I'm not smart enough to figure that out on my own.
@@ -40,9 +110,8 @@ More background on us can be found here:
 + Howard Tam, Senior Protocol Engineer @ Lit Protocol
     + **I'm here because**: _not_ a designer, but interested in providing technical perspective on (end-user) design and feeding back any insights into protocol layer development.
     + **Most pressing secure design problem for me right now is:** secure web2 authentication schemes for onboarding to web3 platforms.
-+ Salief Lewis: Core Contributor @ Public Assembly
-    + I’m here because I want to help codify user aligned design practices.
-    + Most pressing secure design problem for me right now is... hmm
++ [Salief Lewis](https://twitter.com/salieflewis) Core Contributor @ Public Assembly
+    + **I’m here because I want to help codify user aligned design practices.**
 + Ligi: https://ligi.de
     + **I'm here because**: Learn from designers and represent CASA
     + **Most pressing secure design problem for me right now is:** how to make sure users know what they are signing
@@ -65,9 +134,9 @@ More background on us can be found here:
     + **I'm here because**: ...
     + **Most pressing secure design problem for me right now is:** ...
 
-## Agenda:
+### Agenda:
 
-### (10 min) Hello & Intros
+#### (10 min) Hello & Intros
 
 Please make sure you've added your details to "In Attendance" section.
 Ryan'll give a quick pre-amble on why the group was started.
@@ -81,7 +150,7 @@ Ryan'll give a quick pre-amble on why the group was started.
 - [tamara] We need to focus on the specific problems but also communicating the value of UX and the importance of involving it early.
 - [salief] How are tools like account abstraction able to be synthesized into good practices that normal people recognize as trustable?
 
-### (20 min) Principles & purpose review
+#### (20 min) Principles & purpose review
 
 Open discussion about the 7 draft principles and the proposed working group outcomes.
 
@@ -95,29 +164,25 @@ Open discussion about the 7 draft principles and the proposed working group outc
 - [antonela] simply secure and decentpatterns is a great place to look. how do we work on proposals from CASA? We could have more impact if we get involved in active PRs.
 - [ml] if we're not careful we might make a web3 that's worse than web2
 
-### (20 min) Choose an async home
+#### (20 min) Choose an async home
 
 Let's choose a public place to host the ongoing async discussion. Leading proposal right now is to roll it into [CASA (Chain Agnostic Standards Alliance)](chainagnostic.org):
 
-- unanimous agreement. Ryan will coordinate with Ligi/Juan
-
-#### Potential CASA Pros:
-
-- **Likeminded folks:** A lot of wallet client teams (Brave, Metamask, etc) and protocols such as Wallet Connect are active there, which means it'd be a good point of leverage for affecting change at those UX touchpoints.
-- **UX is already a key concern:** though it is couched from an engineering / protocol perspective, a lot of what CASA is tackling are building blocks to improve the user experience in the ecosystem.
-- **Lots of momentum:** there's been significant growth in CASA activity over the past year
-- **Visibility / working in the open:** the whole CASA org infra is focused on working out in the open, and as a result it's getting a lot of visibility
-- **Ability to impact emergent dev standards:** lots of new dev patterns are starting or at least routing through CASA, so we'd be in a great position to help build out prototypes, etc.
-
-#### Potential CASA Cons:
-- **Tying ourselves to blockchains:** The scope of this working group to be broader than just the commonly understood "web3" stack. Being in CASA might turn off anybody who is instinctively anti-web3. That said:
+- **Consensus:** unanimous agreement. Ryan will coordinate with Ligi/Juan
+- **Potential Pros**:
+  - **Likeminded folks:** A lot of wallet client teams (Brave, Metamask, etc) and protocols such as Wallet Connect are active there, which means it'd be a good point of leverage for affecting change at those UX touchpoints.
+  - **UX is already a key concern:** though it is couched from an engineering / protocol perspective, a lot of what CASA is tackling are building blocks to improve the user experience in the ecosystem.
+  - **Lots of momentum:** there's been significant growth in CASA activity over the past year
+  - **Visibility / working in the open:** the whole CASA org infra is focused on working out in the open, and as a result it's getting a lot of visibility
+  - **Ability to impact emergent dev standards:** lots of new dev patterns are starting or at least routing through CASA, so we'd be in a great position to help build out prototypes, etc.
+- **Potential Cons**:
+  - **Tying ourselves to blockchains:** The scope of this working group to be broader than just the commonly understood "web3" stack. Being in CASA might turn off anybody who is instinctively anti-web3. That said:
 	- despite CASA having "chain" in the name, most members truly are "chain agnostic" in that a good deal of the work they do resides offchain and bumps up against DIDs, VCs, and a whole lot of "web2" tech and standards processes.
-- **Dev heavy culture:** the tooling at present is all Github, markdown, etc. Don't think there'd be resistance to us adding a few more tools to the mix, as long as they don't duplicate. And Github is a lot friendlier to non-devs these days. But, it's something to consider.
-- **IPR Concerns**: 
-   - [@bumblefudge] "My only warning is to check with the other participants what level of IPR they're comfortable with-- sometimes people here the word "standards" and assume it's recorded, patent-waived, etc.  If people work for the kind of companies that, ahem, "close-source" their design work, we'd have to bump up the IPR policy of that WG, which is currently in #yolo mode because protocol design IP isn't generally as sensitive as UX"
+  - **Dev heavy culture:** the tooling at present is all Github, markdown, etc. Don't think there'd be resistance to us adding a few more tools to the mix, as long as they don't duplicate. And Github is a lot friendlier to non-devs these days. But, it's something to consider.
+  - **IPR Concerns**: [@bumblefudge] "My only warning is to check with the other participants what level of IPR they're comfortable with-- sometimes people here the word "standards" and assume it's recorded, patent-waived, etc.  If people work for the kind of companies that, ahem, "close-source" their design work, we'd have to bump up the IPR policy of that WG, which is currently in #yolo mode because protocol design IP isn't generally as sensitive as UX"
 
 
-## Action items / Tabled for async:
+### Action items / Tabled for async:
 
 - Setup Github Discussions
     - Let's gather heuristics resources 
@@ -126,8 +191,20 @@ Let's choose a public place to host the ongoing async discussion. Leading propos
 - Tweet announcement from SecureDesignWG twitter about forum 
 - Organize next call - what other timezones to accomodate and how best to do it?
 
-## Links:
+### Links:
 
-https://depatchedmode.mirror.xyz/4t_7BUzz5q3XlPtH7EgtGL61nh9U8plsfH23i7x5_lU
-https://decentpatterns.com/
-https://www.ietf.org/archive/id/draft-iab-for-the-users-03.html
+- https://depatchedmode.mirror.xyz/4t_7BUzz5q3XlPtH7EgtGL61nh9U8plsfH23i7x5_lU
+- https://decentpatterns.com/
+- https://www.ietf.org/archive/id/draft-iab-for-the-users-03.html
+
+## #X TEMPLATE - [RSVP](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F)
+
+### In attendance:
+
+- (add your own name)
+
+### Agenda & Notes:
+
+- **Discussions**: Focus(es) of this call
+- **Projects**: What can Secure Design do to move things forward this month?
+- **Upcoming Events**: Where can members expect to meet up / present under the Secure Design name?
