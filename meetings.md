@@ -1,4 +1,7 @@
 # Secure Design - Community Call
+
+[![hackmd-github-sync-badge](https://hackmd.io/fATDo4lQTymza-XxPwxG7A/badge)](https://hackmd.io/fATDo4lQTymza-XxPwxG7A)
+
 [Community Calendar](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
 ## #3 May 16, 8am PST - [RSVP](https://lu.ma/b2faxjtg)
