@@ -4,6 +4,45 @@
 
 [Community Calendar](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #4 June 20, 8am PST - [RSVP](https://lu.ma/oal36w87)
+
+### In attendance:
+
+- Ryan Betts, Fission
+- Agost Biro, SealVault
+- Juan Caballero, CASA/PLN
+- Salief Lewis (AFK)
+- Randall (Thunderbolt Labs)
+
+### Agenda & Notes:
+
+- **Discussions**: This month's call will focus on review & feedback of permissions & authorization UX prototypes.
+    - Agost Biro: Spender Approval UX Pattern Guidance // [PassKey Creation guidelines from FIDO Alliance](https://fidoalliance.org/ux-guidelines-for-passkey-creation-and-sign-ins/) ?
+        - interested in fleshing out collab?
+        - shared icons inherited from FIDO collab documentation...
+        - Discussion with call notes: https://github.com/ChainAgnostic/secure-design/discussions/9
+- **Projects**: What can Secure Design do to move things forward this month?
+    + DWeb Camp:
+        + Ryan's session: Legible AuthZ
+        + Johnny's & ___ 's session: Trust Signals
+
+
+## Helpful Tools
+
+- High level flow diagram
+- Figma UI Kit for iconography?
+
+## Upcoming Events
+
+- Secure Design @ [DWeb Camp - June 21-25](https://dwebcamp.org/)
+- [Wallet Uncon](https://github.com/WalletUnCon) - Nov 17 (tentative), Istanbul
+  - any volunteers?
+
+## Action items
+- Possible project to investigate accessibility concerns when switching between wallet and dapp to sign stuff
+- ryan will look into a community/open-source Figma org for sharing drafts and merging PRs
+    - might be good to assess penpot as plan B in case we have to ditch figma suddenly for [new mgmt reasons](https://www.reuters.com/markets/deals/adobes-deal-acquire-figma-under-threat-eu-regulators-ft-2023-06-20/) (other shoe may not have dropped yet on that acquisition)
+
 ## #3 May 16, 8am PST - [RSVP](https://lu.ma/b2faxjtg)
 
 ### In attendance:
