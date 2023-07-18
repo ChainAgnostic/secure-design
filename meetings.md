@@ -1,8 +1,64 @@
-# Secure Design - Community Call
+# Secure Design - Community Calls
 
 [![hackmd-github-sync-badge](https://hackmd.io/fATDo4lQTymza-XxPwxG7A/badge)](https://hackmd.io/fATDo4lQTymza-XxPwxG7A)
 
 [Community Calendar](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
+
+## #5 July 18, 8am PST - [RSVP](https://lu.ma/haxnzcfm)
+
+### In attendance: 
+
+- Ryan Betts, Fission
+- Agost Biro, SealVault
+- Eileen Wagner, [Decent Patterns](https://decentpatterns.com/)
+- Gabriel 
+- Antonela, MetaMask
+- Juan Caballero, chainagnostic.org
+
+
+### Agenda & Notes:
+- Ryan presenting: How to Ask Permission: https://github.com/ChainAgnostic/secure-design/discussions/7
+    - starting points came from Android team c. 2013
+    - market evolution since: install-time warning/consents-in-advance to sidestep the warnings and interactions this mandates
+        - other grantees of permission: web platform, identity provider/middleman... proliferating [consents and policies](https://wompampsupport.azureedge.net/fetchimage?siteId=7575&v=2&jpgQuality=100&width=700&url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F020%2F852%2Fforgot_to_ask_thumb.jpg)
+    - updated with Agost:
+        - ryan: going deeper than just severity and reversibility; local-only seems to derail assumptions here (most local-only easily reversed/undone)
+    - Q&A/responses
+        - antonela - might that consent dialogue be quite late in the process? I can imagine a pre-set policy forking this flow
+        - antonela - might the consent dialogue be confirming or varying from a pre-set default (e.g. default in browser/wallet across all sites, but first time visiting a new site/dapp/etc?)
+            - backstory: tor research that users were changing global defaults just to visit one site that required a variance from them
+        - antonela: another complication: delegations, AccAbs, paymasters, etc - things you want end-user to consent to might need to pass-thru multiple actors or layers... 
+        - who checks the defaults? is there a fiduciary/auditor who checks in once a year and walks you through all this?
+            - Juan: AccAbs is probably going to involve lots of fiduciaries and middle-men...
+            - Antonela: trust signals and reputation/associations can be layered on to these decision points, and trust registries
+                - petname layer on top of that
+        - antonela: consent has to happen upfront for anything dynamic to come later
+            - ryan: scope this work already done to implicit-trust context; think about more complex version for other contexts
+        - antonela: local allowlist which parses on top of defaults and policies (e.g. interruptive consent adds counterparty to exception list) was the dominant strategy when i was at Tor
+- Spender Approval UX Pattern Guidance: https://github.com/ChainAgnostic/secure-design/discussions/9
+    - agost: intro: urgent and crucial for web3 UX today
+        - MM swap tab, uniswap, 1inch
+            - antonela: sidebar about MM allowance UX: allowance UX has been iterated drastically due to trial-and-hour; it's a major problem for us, even with all the UX research and metrics we're STILL not sure end-users are actually reading what they're allowing, it forced a tradeoff of ethics<>business... very much work in progress still!
+        - UX review 
+            - uniswap has a separate step to confirm (but onetime/ongoing distinction not exactly explicit in dialogue text...) - "spending"
+            - MM swap tab is functionally a "trusted interface", warns you about high "spending caps"
+            - coinbase "withdrawal limit"
+        - 1inch - "permit" pattern = offchain signature gets bundled with onchain approval
+            - MM shows it not as a trusted interface because it's an offchain; 
+            - CB wallet displays hideous EIP712 object in prompt :face_with_rolling_eyes: - doesn't love offchain txns
+        - Antonela - This is all kind of bespoke... not gonna scale
+- Future Topic - permissions are unauditable - protocol definitions needed :sob: 
+    - antonela: everyone's optimizing for their own products in a way that neither scales nor gives their user much sovereignty
+    - agost: i want to design a library that can parse all the receipts of these events (and combine that with txn simulation and trust signaling)
+
+### Discussed CAIPs
+- https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-25.md
+
+### Announcements:
+- Notes from the DWeb workshop: https://github.com/ChainAgnostic/secure-design/discussions/11
+- DappCon: Legible Authorization workshop
+- WalletUncon: Friday Nov 17, during DevConnect in Istanbul
+- Next call: Aug 22 @ 8am PST • [RSVP](https://lu.ma/519c90f6)
 
 ## #4 June 20, 8am PST - [RSVP](https://lu.ma/oal36w87)
 
@@ -24,7 +80,7 @@
 - **Projects**: What can Secure Design do to move things forward this month?
     + DWeb Camp:
         + Ryan's session: Legible AuthZ
-        + Johnny's & ___ 's session: Trust Signals
+        + Jonny & Hester's session: Trust Signals
 
 
 ## Helpful Tools
