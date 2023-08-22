@@ -2,7 +2,44 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/fATDo4lQTymza-XxPwxG7A/badge)](https://hackmd.io/fATDo4lQTymza-XxPwxG7A)
 
-[Community Calendar](https://lu.ma/calendar/cal-FOmHnDL7EZJ6P5F) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
+[Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
+
+## #6 August 22, 8am PST - [RSVP](https://lu.ma/tyyxp3uf)
+
+### In attendance:
+- Stefan Magdalinski, Filecoin Foundation
+- Nick Thomas (@nichoth), Formulate / [Half Light](https://github.com/ssc-hermes)
+- Erin
+- Juan 
+- Ryan
+- Agost
+
+### Agenda & Notes:
+
+- Self-intros
+    - Nic: working on e2e social network running on WNFS, and getting to the authz flows now about who can see what
+    - Erin: when you post something, selecting groups that control visibility. There's a tension between making it easy and placing a burden on people.
+    - Stef: Big interest on UX and security
+    - Agost: primary focus on token approvals
+- Research notes
+    - Ryan: HCI OG Angela Sasse (Bochum, UCL)
+        - humans do what they can, often security break downs are insufficient mental models or cognitive tools given to users
+        - "functional" versus "structural" mental models
+        - [ ] AI: Ryan will add some greatest hits to the biblio thread on GH discussions
+    - Definitions of auth terminology is needed. Let's make a glossary.
+    - How To Ask Permission Flow: let's take a look at alternatives to, or stricter definitions of, the "Application" bucket. In decentralized systems, it's not so clear what the application boundaries are.
+    - Threat modelling: are there simple exercises to get started?
+- F2F in Berlin
+    - Sometime between Sep 8-18, organizing a meetup in Berlin
+
+### Announcements:
+
+- DappCon: Legible Authorization workshop
+- WalletUncon.org - 
+- Minor things moving through IP processes:
+    - EIP-7377 for turning an existing EOA into a SC Wallet
+        - i may have low-key [volunteered this group to give some input](https://ethereum-magicians.org/t/eip-7377-migration-transaction/15144/23?u=bumblefudge) if this gets to review/last-call stage and they want UX considerations or security mitigations - agenda for a future meeting
+- Norm Hardy Prize: https://foresight.org/norm-hardy-prize/
 
 ## #5 July 18, 8am PST - [RSVP](https://lu.ma/haxnzcfm)
 
