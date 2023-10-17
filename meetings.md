@@ -4,6 +4,54 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #8 October 17, 8am PST 
+
+### In attendance:
+- Ryan, Fission
+- doug
+
+### Agenda & Notes:
+- Kept the meeting light and discussed backgrounds that brought us to the space
+
+## #7 September 26, 8am PST 
+
+### In attendance:
+- Ryan, Fission
+- pfc
+- doug 
+- antonela
+
+### Agenda & Notes:
+
+- Antonela: 
+    - how much do we decentralize now, and how much do we decentralize later. But more importantly how do the decisions we make today enable us to still achieve that future vision.
+    - as a system designer, the defaults we choose now will condition user behaviour - even for experts
+    - how do we achieve fewer defaults?
+    - lets apply for grants!
+    - security indicators: 
+        - lock in the URL bar: this is governed by certificate authorities. what kind of trust process are we outsourcing to other organizations, and to what degree are we aware that is happening?
+        - how do pet names fit into a "web of trust" style system that could replace certificate authorities?
+    - how does our criticality about these problems concretely impact designs we ship today?
+- Doug: how does trust relate to desire paths? "paving the cowpaths"
+    - There might be two extremes in terms of trust personas: folks that trust right away and revoke it over time, or awared *zero* trust to start with and dole it out over time as it is earned.
+- Pet names:
+    - we have systems in the middle of all relationships that mediate and co-construct trust. those are the systems that we are building.
+    - those systems are defacto attenuating the flow of trust between the parties in those relationships
+    - the entities trusting each other might give each other "pet names" — how those are implemented greatly impacts 
+    - Name Name System: https://fission.codes/ecosystem/whocan-and-nns/
+- Multiple identities:
+    - it's important to support multiple "Ryan's" that may or not be labelled "Ryan".
+    - Account Metadata Standard: https://docs.google.com/document/d/1baSoCMcd8LHsOcg_KKLJLBqhqBreI2A6KldD9l86jC0/edit#heading=h.mk41nv5erwgt
+
+- Trust indicators in permissionless systems - https://github.com/ChainAgnostic/secure-design/discussions/14
+- Threat modelling: https://github.com/ChainAgnostic/secure-design/discussions/13
+- - EIP-7377 for turning an existing EOA into a SC Wallet
+    - [our group has been asked to give some input](https://ethereum-magicians.org/t/eip-7377-migration-transaction/15144/23?u=bumblefudge) if this gets to review/last-call stage and they want UX considerations or security mitigations - agenda for a future meeting
+
+### Announcements:
+- WalletUncon.org - CFP deadline Nov 1
+- Norm Hardy Prize - deadline September 30: https://foresight.org/norm-hardy-prize/
+
 ## #6 August 22, 8am PST - [RSVP](https://lu.ma/tyyxp3uf)
 
 ### In attendance:
@@ -28,7 +76,7 @@
         - [ ] AI: Ryan will add some greatest hits to the biblio thread on GH discussions
     - Definitions of auth terminology is needed. Let's make a glossary.
     - How To Ask Permission Flow: let's take a look at alternatives to, or stricter definitions of, the "Application" bucket. In decentralized systems, it's not so clear what the application boundaries are.
-    - Threat modelling: are there simple exercises to get started?
+    - Threat modelling: are there simple exercises to get started? Started a thread: https://github.com/ChainAgnostic/secure-design/discussions/13
 - F2F in Berlin
     - Sometime between Sep 8-18, organizing a meetup in Berlin
 
@@ -36,7 +84,7 @@
 
 - DappCon: Legible Authorization workshop
 - WalletUncon.org - 
-- Minor things moving through IP processes:
+- Minor things moving through EIP processes:
     - EIP-7377 for turning an existing EOA into a SC Wallet
         - i may have low-key [volunteered this group to give some input](https://ethereum-magicians.org/t/eip-7377-migration-transaction/15144/23?u=bumblefudge) if this gets to review/last-call stage and they want UX considerations or security mitigations - agenda for a future meeting
 - Norm Hardy Prize: https://foresight.org/norm-hardy-prize/
