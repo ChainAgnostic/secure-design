@@ -4,6 +4,47 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #9 December 6, 9am PST 
+
+Zoom link comes up "invalid". 
+https://us02web.zoom.us/j/6558088617?pwd=MGV4QnA5bmlwWWJ3eWVTUHRqazhEQT09
+
+### In attendance:
+- Ryan, Fission
+- Antonela, MetaMask
+- Doug, PeerPiper
+- Aaliyah 
+
+### Agenda & Notes:
+- antonela: OffScript debrief - designers feel that AA (4337) has given us everything we need
+    - risk that this will actually inhibit users sense of ownership
+    - this could cause too much fragmentation in the system as different silos implement their own SCA that aren't interoperable. Safe will ship w/in Safe Network, Family wallet into Lens
+    - How are we going to, as a community of designers, connect all of these accounts?
+    - How do we make it easier for people to manage their many accounts across many networks
+- Ryan: heavy agree - we need to reframe Account Abstraction as a bundle of outcomes, rather than focus on specific flavours of achieving those. Including things like programmability, etc. You may be able to achieve these with a combination of tactics.
+- Aalyiah: the best UX for web3 is where are user doesn't have to download anything
+- Antonela: let's stop worrying about the next billion until we've addressed the needs of the current 10 million. There are constraints when you have to deal without a central intermediary.
+    - We can take patterns from what exists, but we are not building what exists.
+    - I *have* to make sure that people are *reading* things
+    - Let's apply all of our expertise tangibly to an API. Deconstruct it, and bring user facing mental models to the discussion
+- Doug: in most ux you have basic functiolity and then "..." hiding more. Could we apply that here?
+- Aaliyah: k-pop collectibles are an example of collaging things together 
+- Year in review
+    - Legible Authorization / How To Ask Permission
+    - Trust Indicators
+    - No Defaults
+    - Threat Modelling 
+- Year to come
+    - Educate VS Inform
+    - Anatomy of Secure Design
+    - Grants
+    - EIP-7377 (https://ethereum-magicians.org/t/eip-7377-migration-transaction/15144/23?u=bumblefudge) if this gets to review/last-call stage and they want UX considerations or security mitigations - agenda for a future meeting
+    - Norm Hardy Prize: https://foresight.org/norm-hardy-prize/
+- WalletUncon highlights
+    - aaliyah: moving beyond just asset ownership, towards communication networks 
+    - doug: secret sharing and messaging
+    - ryan: compelling designers to engage w/ technical standards
+
 ## #8 October 17, 8am PST 
 
 ### In attendance:
@@ -40,7 +81,7 @@
     - the entities trusting each other might give each other "pet names" — how those are implemented greatly impacts 
     - Name Name System: https://fission.codes/ecosystem/whocan-and-nns/
 - Multiple identities:
-    - it's important to support multiple "Ryan's" that may or not be labelled "Ryan".
+    - it's important to support multiple "Ryans" that may or not be labelled "Ryan".
     - Account Metadata Standard: https://docs.google.com/document/d/1baSoCMcd8LHsOcg_KKLJLBqhqBreI2A6KldD9l86jC0/edit#heading=h.mk41nv5erwgt
 
 - Trust indicators in permissionless systems - https://github.com/ChainAgnostic/secure-design/discussions/14
@@ -316,6 +357,8 @@ More background on us can be found here:
 + COPY ME: Name, Profession & Links
     + **I'm here because**: ...
     + **Most pressing secure design problem for me right now is:** ...
+
+## #1 March ?, 8am PST
 
 ### Agenda:
 
