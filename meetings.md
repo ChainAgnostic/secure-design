@@ -4,6 +4,29 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #10 January 17, 9am PST
+
+Zoom link was invalid again. Sent out update via email and will fix for good before the next meeting. Apologies to any for whom this caused confusion.
+
+## In attendance:
+- Ryan
+- Juan
+- Aaliyah 
+
+## Agenda & Notes:
+- Proposed EIP-7377, but progess is stalled. Responded in the thread on Eth Magicians to say we're ready to help when or if it boots back up.
+- Now let's turn our focus to EIP-3074 (possibly with EIP-5003?) and EIP-7212.
+- EIP-3074
+    - In what's does this meaningful differ from EIP-7377?
+    - Whomever is going to propose this call to your "Wallet Client" / Wallet [needs to be trusted](https://ethereum-magicians.org/t/eip-3074-auth-and-authcall-opcodes/4880/63)
+    - There needs to be some awareness about what EOA and Contract Accounts are, using more approachable language for non-experts.
+    - We need to figure out recommendations for dApps and Wallets to inform people about these things — expressly not using the term "educate" here.
+- Todo: write up an Ethereum Magicians unifying thread about EOA -> Contract Account migrations referencing EIP-7377, 3074, 7212.
+- Juan: UX of Standards Process in general
+    - what is the role of CASA in the Ethereum standards process?
+    - seems like Eth Magicians is less active, because there's maybe a bit more fracturing to L2s/RIPs and less low hanging fruit
+    - let's try reviving things and involving more voices
+
 ## #9 December 6, 9am PST 
 
 Zoom link comes up "invalid". 
