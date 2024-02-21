@@ -4,16 +4,30 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #11 February 21, 9am PST
+
+### In attendance
+
+- Aaliyah
+- Ryan
+
+### Agenda & Notes
+
+- Focused on EIP-3074 discussions. Summary here:https://github.com/ChainAgnostic/secure-design/discussions/16
+- Reviewed the difference between approve() contract interactions and PERMIT/PERMIT2 messages
+- Eth call next week, breakout focused on EOA/AA. We should attend: https://github.com/ethereum/pm/issues/962
+- link to Wallet Unsalon in Denver: https://app.unlock-protocol.com/event/wallet-uncon-unsalon-expression-of-interest
+
 ## #10 January 17, 9am PST
 
 Zoom link was invalid again. Sent out update via email and will fix for good before the next meeting. Apologies to any for whom this caused confusion.
 
-## In attendance:
+### In attendance:
 - Ryan
 - Juan
 - Aaliyah 
 
-## Agenda & Notes:
+### Agenda & Notes:
 - Proposed EIP-7377, but progess is stalled. Responded in the thread on Eth Magicians to say we're ready to help when or if it boots back up.
 - Now let's turn our focus to EIP-3074 (possibly with EIP-5003?) and EIP-7212.
 - EIP-3074
