@@ -4,6 +4,118 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## Wallet UnSalon: EthDenver 2024
+
+### In Attendance
+
+- Ryan
+- Jacque006 (WAX-PSE)
+- Bumblefudge
+
+### Agenda & Notes
+
+#### EOA -> Contract Account Migration UX
+
++ **Pitch:** Proposals like EIP-3074, EIP-5003, EIP-5860(?) and EIP-7377 propose ways for EOAs to migrate to, or delegate full control to, a Contract Account. This can bring incredibly powerful programmability and composibility to EOAs, and enable key rotation. But it could also leave people very vulnerable. Getting any proposal implemented safely means solving addressing rough edges that already exist in wallet <> app interactions. Let's map the greatest risks and discuss ways to address the UX responsibly.
++ **Time:** ✅ Fri Mar 1, 9:30am
++ **Place:** ✅ [Denver Central Market](https://www.google.com/maps/place/The+Denver+Central+Market/@39.7593649,-104.9871878,17z/data=!4m14!1m7!3m6!1s0x876c791fee162725:0x831b98dab33eef8d!2sThe+Denver+Central+Market!8m2!3d39.7593608!4d-104.9846129!16s%2Fg%2F11c45k13y4!3m5!1s0x876c791fee162725:0x831b98dab33eef8d!8m2!3d39.7593608!4d-104.9846129!16s%2Fg%2F11c45k13y4?entry=ttu)
++ **Hosted by:** Ryan (@depatchedmode) on behalf of Secure Design WG
++ **Attendees:** 
+    + Ryan ✅ - happy to moderate or scribe
+    + Jake C-T ✅ - can scribe
+    + bumblefudge ✅
++ **Notes:**
+    + And we're here: https://warpcast.com/depatchedmode/0xa890ab8f
+    + Job Stories
+        + All Core Devs
+            + When considering what, if any, migration approach to support, 
+                + we want to make sure there are *no* protocol regression, so that
+                + we want to ensure backwards compatibility with exsiting contracts and front ends, so that
+                + we want to identify the simplest path, so that sufficient test coverage is feasible
+                + we want maximal consistency across all EVM flavored chains, so that apps, wallets and users don't have to content with many inconsistent flavours of behaviour
+                + [we may not know or care what happens to, say, replaying old CACAOs from SIWE post rotation?]
+            + When considering account interactions, we want to move away from non-rotatable keys as a direct account layer, so that bad security practices are not the default way of doing things
+        + App Developers (both FE and Contract)
+            + When implementing a contract, we need help making sure we are compatible with SCA's, so that all these future accounts can actually use shit
+        + Wallet Maintainers
+            + When we are planning to support EOA -> SCA migration, we need to know which approach/standard has critical mass
+                + so that we can commit hours to supporting it now
+                + so that we can ensure any work in progress will not accumulate tech debt or block us from pivoting to supporting that approach
+        + Wallet Users
+            + When I am concerned that my EOAs private key has been compromised 
+                + I want to that key to no longer be valid, so that it can't be abused on my behalf
+                + I want to back that account by a safe set keys.
+                + I want to maintain the continuity of my identity, so that folks still know who me is.
+                + I do not want to incur the expense of migrating all of my assets
+            + When my onchain activity becomes more sophisticated
+                + I want to be able to customize and extend the capabilities of my account, so that I can be more expressive without needing to sign a shit ton of messages
+                + I want multiple onchain identifiers to resolve to resolve to a single notion of an "account" so that I can do a bunch of things from different places that I want to be understood as being done by the same "me".
+            + When I'm seeking these account migration outcomes
+                + As any level of user
+                    + I need to have a clear mental model of what is about to happen
+                    + I do not want to be scammed
+                    + I need to know that account migration is possible
+                    + I need to be aware of any downsides or changes in behaviour
+                + As a "noob"
+                    + I want to get a recommendation from my trusted "sophistacted user" friend, so that I have confidence I'm choosing the right path
+                + As a "sophistacted user"
+                    + I want to know I can trust the entities performing the migration 
+                    + I need to know the differences between different account migration approaches, and their tradeoffs, if there are multiple approaches
+    + By migrating, as a person, I want to:
+        + Get more security (ie. rotate keys)
+        + Be able to do more powerful interactions
+    + And I want to do this via a migration because:
+        + I'd like to retain the identity I've accumlated at this public address
+            + Web 2 example: Reddit accounts
+            + Can we just attest to multiple identifiers in parallel or sequence being a single "account"
+        + It's expensive to move all the assets
+            + This can be done via multicall but would be expensive
+            + There may be a lot of folks willing to paymaster these transitions
+    + The biggest threats are:
+        + How do you ensure the migration happens on all chains?
+        + How do you ensure users do NOT execute the migration with malicious actors?
+        + How do you protect against future chains to launch?
+            + Technical: tombstone reference on L1 mainnet that announces to those chains? 
+
+#### Account Recovery Specs/Standards
+
++ **Pitch:** Currently, smart contract account recovery is similar but implemented slightly differently accross many different account ecosystems. They key rotation process can have differing payloads such as an eth account or specific public key type. In addition, the process of who is allowed to recover, what delays are added (timelock), and how an owner can cancel or dispute the recovery also has no standarized way of being implmented. I would like to 1. Discuss any existing specs that may be relevant, and why they might not be more widely adopted. 2. Explore ideas on what is common for all account recovery processes and could be standarized. And equally importantly, what cannot.
++ **Time:** ✅ Fri Mar 1, 11am
++ **Place:** ✅ [Denver Central Market](https://www.google.com/maps/place/The+Denver+Central+Market/@39.7593649,-104.9871878,17z/data=!4m14!1m7!3m6!1s0x876c791fee162725:0x831b98dab33eef8d!2sThe+Denver+Central+Market!8m2!3d39.7593608!4d-104.9846129!16s%2Fg%2F11c45k13y4!3m5!1s0x876c791fee162725:0x831b98dab33eef8d!8m2!3d39.7593608!4d-104.9846129!16s%2Fg%2F11c45k13y4?entry=ttu)
++ **Hosted by:** Jake C-T (jacque006) [Wallet Acount eXperiments](https://wax.pse.dev)
++ **Planning to attend:** 
+    + Jake C-T ✅ - can moderate and/or scribe
+    + bumblefudge - would love to attend and scribe if FRIDAY SAT or SUN haha, uncl if can make any time thurs
+    + Ryan (depatchedmode)
++ **Notes:**
+    + Why is this important? 
+        * ZKEmail (DKIM-signed email passed to a ZKP --> validate properties of an email without revealing it)
+            * basic ex.: email with subject : send XXX Eth to 0xBABB
+            * recovery ex.: email with intent "recover key to this email", committed onchain in ZK-proofable form (executed after an onchain check) - "passive reset" for onchain acct, familiar "email recovery" flow
+                * problem so far: every major smart contract wallet has a diff approach, hard to align
+                * WAX's position: delayed-- one email as only recovery should have a 48hr waiting period, in case people lose control of a gmail or some such
+                * Ryan: Henry from Privy.io might have thoughts on this; migration and recovery are the two big topics for them; they have some now but they are all a little centralized/permissioned
+                * Solwallet recovery example: recover to another account (SC or EOA)
+                * Clave: rotation mesg payload is a passkey-specific (non secp) key
+            * goal: come up with a plugin system with a common core across diff flows/reqs
+                * already have a draft clave plugin for the circuit
+                * solwallet already has an implementation but would rather use our our audited circuit/simpleton if we launch one
+                * ryan: everywherecomputer could do the expensive proofing?
+        * breaking out the reqs:
+            * add new signers/multisig/recovery factors
+                * n/m = instant, 1/m = timelock
+                * rotation itself always implementation-specific
+                * give future implementations an interop target; give wallets a common interface so not having to implement NxN recovery flows
+        * bumble: when standard
+            * jake: yeah it'll be an ERC some day but we're still in research phase and we're not sure it justifies an ERC
+            * bumble: nonsense, BCP-style informational ERC or gtfo
+            * jake: ok ok i'll present a doc at next AllWalletDevs (20Mar) and we can go from there
+    * ryan: wireframes and user stories for migration and recovery generally?
+        * user story 1: disposable zero-balance account created thru privy/social login etc
+        * user story 2: start as ^ and suddenly land tons of coin but want to migrate off a social-login 
+        * user story 3: onchain insurance making someone whole
+        * user story 4: community-managed threats, co-op/credit-union models
+
 ## #11 February 21, 9am PST
 
 ### In attendance
