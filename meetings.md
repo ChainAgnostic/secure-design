@@ -4,6 +4,47 @@
 
 [Community Calendar](https://lu.ma/securedesign) • [Github Discussions](https://github.com/ChainAgnostic/secure-design/discussions)
 
+## #12 April 24, 10am PST
+
+### In attendance
+
+- Ryan Betts, free agent (@depatchedmode)
+- Dan Finlay, MetaMask (@danfinlay)
+- Barbara Schorchit, MetaMask
+- Aaliyah Pierre
+
+### Agenda & Notes
+
+- 12th meeting milestone! Quick review of purpose:
+    - focus on safe and secure web3 UX
+    - safety and security must be commoditized; not a USP / product differentiator
+    - "no defaults" — needs are very individual, and so individuals should be supported by best practices most relevant to them
+- EIP-3074: https://github.com/ChainAgnostic/secure-design/discussions/16
+    - Dan: what is at the core of 3074? "Can you let somebody do anything?"
+        - "We should default to we aren't sure it's safe to let anyone do anything today"
+        - There should be multiple approaches, based on persona
+        - Is this a dAPP tool, a wallet tool or ...? 
+        - It's a tool for enhancing EOAs to explore SCA interfaces. This leads to "what are better interfaces?"
+        - Invokers are an opportunity to experiment with radical authorization patterns
+        - Safety could be provided by the wallet itself (eg. Metamask)
+        - [Permissions Standard?](https://www.notion.so/metamask-consensys/Onchain-Permissions-Standard-1ca8cf7534f245cc9c06e13abbd716c7)
+        - Zero-dev - contract account wallet w permissions system
+    - Ryan: Permissions (like AUTH) should be broken up into smaller bits!
+        - Dan: What are those bits?
+        - Dan: presenting onchain permission standard snap
+        - Things that could be sketched via tightly-scoped permissions
+            - token allowance / permit
+            - Voting & vote delegation
+            - what would a non-standard permission look like?
+                - eg. warpcast permission delegation
+    - Next steps:
+        - Write a blog post about: 
+            - current UX understanding of 3074 
+            - the need for dApps to support both types of accounts
+            - the benefits of a world where dApps can declare what they need before wallets reveal it
+            - benefits of a world where dApps can just-in-time ask for permission — when it's needed
+        - Organize next call: Berlin Blockchain Week in-person?
+
 ## Wallet UnSalon: EthDenver 2024
 
 ### In Attendance
